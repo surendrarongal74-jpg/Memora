@@ -1,9 +1,10 @@
 import { Kysely } from 'kysely';
+import type { PersonSearchOptions } from 'src/repositories/person.repository.js';
 import { PersonUserRole } from 'src/dtos/person.dto.js';
 import { AssetFileType, AssetVisibility, UserMetadataKey } from 'src/enum.js';
 import { LoggingRepository } from 'src/repositories/logging.repository.js';
 import { PersonUserRepository } from 'src/repositories/person-user.repository.js';
-import { PersonRepository, type PersonSearchOptions } from 'src/repositories/person.repository.js';
+import { PersonRepository } from 'src/repositories/person.repository.js';
 import { DB } from 'src/schema/index.js';
 import { BaseService } from 'src/services/base.service.js';
 import { MediumTestContext, newMediumService } from 'test/medium.factory.js';

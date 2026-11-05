@@ -2,13 +2,12 @@ import {
   Column,
   CreateDateColumn,
   ForeignKeyColumn,
-  type Generated,
   Index,
   PrimaryColumn,
   PrimaryGeneratedColumn,
   Table,
-  type Timestamp,
 } from '@immich/sql-tools';
+import type { Generated, Timestamp } from '@immich/sql-tools';
 import type { VideoSegmentCodec } from 'src/enum.js';
 import { video_stream_variant_codec_enum } from 'src/schema/enums.js';
 import { AssetTable } from 'src/schema/tables/asset.table.js';

@@ -26,6 +26,7 @@ import { LoggingRepository } from 'src/repositories/logging.repository.js';
 import { immich_uuid_v7 } from 'src/schema/functions.js';
 // eslint-disable-next-line import-x/no-duplicates
 import 'src/schema/index.js'; // make sure all schema definitions are imported for schemaFromCode
+
 // eslint-disable-next-line import-x/no-duplicates
 import { DB } from 'src/schema/index.js';
 import { vectorIndexQuery } from 'src/utils/database.js';
@@ -242,7 +243,8 @@ export class DatabaseRepository {
       await sql`
         ALTER TABLE ${sql.raw(table)}
         ALTER COLUMN embedding
-        SET DATA TYPE vector(${sql.raw(String(dimSize))})`.execute(tx);
+        SET DATA TYPE vector(${sql.raw(String(dimSize))})
+      `.execute(tx);
       await sql.raw(vectorIndexQuery({ vectorExtension, table, indexName, lists })).execute(tx);
     });
     this.logger.log(`Reindexed ${indexName}`);

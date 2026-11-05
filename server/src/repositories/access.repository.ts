@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { type Kysely, type NotNull, sql } from 'kysely';
+import { sql } from 'kysely';
 import { InjectKysely } from 'nestjs-kysely';
+import type { Kysely, NotNull } from 'kysely';
 import { ChunkedSet, DummyValue, GenerateSql } from 'src/decorators.js';
 import { PersonUserRole } from 'src/dtos/person.dto.js';
 import { AlbumUserRole, AssetVisibility } from 'src/enum.js';

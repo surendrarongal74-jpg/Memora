@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { type Kysely, type NotNull, type Selectable, type ShallowDehydrateObject, sql } from 'kysely';
+import { sql } from 'kysely';
 import { jsonArrayFrom } from 'kysely/helpers/postgres';
 import { InjectKysely } from 'nestjs-kysely';
+import type { Kysely, NotNull, Selectable, ShallowDehydrateObject } from 'kysely';
 import { columns } from 'src/database.js';
 import { Chunked, DummyValue, GenerateSql } from 'src/decorators.js';
 import { MapAsset } from 'src/dtos/asset-response.dto.js';

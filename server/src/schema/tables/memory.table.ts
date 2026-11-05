@@ -4,12 +4,11 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   ForeignKeyColumn,
-  type Generated,
   PrimaryGeneratedColumn,
   Table,
-  type Timestamp,
   UpdateDateColumn,
 } from '@immich/sql-tools';
+import type { Generated, Timestamp } from '@immich/sql-tools';
 import { UpdateIdColumn, UpdatedAtTrigger } from 'src/decorators.js';
 import { MemoryType } from 'src/enum.js';
 import { memory_delete_audit } from 'src/schema/functions.js';

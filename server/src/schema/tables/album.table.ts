@@ -3,12 +3,12 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   ForeignKeyColumn,
-  type Generated,
   PrimaryGeneratedColumn,
   Table,
   Timestamp,
   UpdateDateColumn,
 } from '@immich/sql-tools';
+import type { Generated } from '@immich/sql-tools';
 import { UpdateIdColumn, UpdatedAtTrigger } from 'src/decorators.js';
 import { AssetOrder } from 'src/enum.js';
 import { AssetTable } from 'src/schema/tables/asset.table.js';

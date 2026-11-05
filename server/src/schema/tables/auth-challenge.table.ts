@@ -1,12 +1,5 @@
-import {
-  Column,
-  CreateDateColumn,
-  ForeignKeyColumn,
-  type Generated,
-  PrimaryGeneratedColumn,
-  Table,
-  type Timestamp,
-} from '@immich/sql-tools';
+import { Column, CreateDateColumn, ForeignKeyColumn, PrimaryGeneratedColumn, Table } from '@immich/sql-tools';
+import type { Generated, Timestamp } from '@immich/sql-tools';
 import { AuthChallengeType } from 'src/enum.js';
 import { UserTable } from 'src/schema/tables/user.table.js';
 

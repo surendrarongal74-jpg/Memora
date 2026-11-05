@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { type ExpressionBuilder, type Insertable, type Kysely, type Updateable, sql } from 'kysely';
+import { sql } from 'kysely';
 import { jsonArrayFrom, jsonObjectFrom } from 'kysely/helpers/postgres';
 import { InjectKysely } from 'nestjs-kysely';
+import type { ExpressionBuilder, Insertable, Kysely, Updateable } from 'kysely';
 import { columns } from 'src/database.js';
 import { Chunked, ChunkedArray, ChunkedSet, DummyValue, GenerateSql } from 'src/decorators.js';
 import { AlbumUserCreateDto, MapAlbumDto } from 'src/dtos/album.dto.js';

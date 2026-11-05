@@ -3,12 +3,12 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   ForeignKeyColumn,
-  type Generated,
   PrimaryGeneratedColumn,
   Table,
   Timestamp,
   UpdateDateColumn,
 } from '@immich/sql-tools';
+import type { Generated } from '@immich/sql-tools';
 import { UpdateIdColumn, UpdatedAtTrigger } from 'src/decorators.js';
 import { NotificationLevel, NotificationType } from 'src/enum.js';
 import { UserTable } from 'src/schema/tables/user.table.js';

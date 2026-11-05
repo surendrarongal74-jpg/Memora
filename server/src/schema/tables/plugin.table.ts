@@ -1,13 +1,13 @@
 import {
   Column,
   CreateDateColumn,
-  type Generated,
   PrimaryGeneratedColumn,
   Table,
   Timestamp,
   Unique,
   UpdateDateColumn,
 } from '@immich/sql-tools';
+import type { Generated } from '@immich/sql-tools';
 import { PluginTemplate } from 'src/dtos/plugin.dto.js';
 
 @Unique({ columns: ['name', 'version'] })

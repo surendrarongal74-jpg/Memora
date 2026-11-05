@@ -1,12 +1,5 @@
-import {
-  Column,
-  CreateDateColumn,
-  ForeignKeyColumn,
-  type Generated,
-  Table,
-  Timestamp,
-  Unique,
-} from '@immich/sql-tools';
+import { Column, CreateDateColumn, ForeignKeyColumn, Table, Timestamp, Unique } from '@immich/sql-tools';
+import type { Generated } from '@immich/sql-tools';
 import { PrimaryGeneratedUuidV7Column } from 'src/decorators.js';
 import { IntegrityReport } from 'src/enum.js';
 import { AssetFileTable } from 'src/schema/tables/asset-file.table.js';

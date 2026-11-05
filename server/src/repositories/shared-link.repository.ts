@@ -1,16 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import {
-  type ExpressionBuilder,
-  type Insertable,
-  type Kysely,
-  type Selectable,
-  type ShallowDehydrateObject,
-  type Updateable,
-  sql,
-} from 'kysely';
+import { sql } from 'kysely';
 import { jsonArrayFrom, jsonObjectFrom } from 'kysely/helpers/postgres';
 import { omit } from 'lodash-es';
 import { InjectKysely } from 'nestjs-kysely';
+import type { ExpressionBuilder, Insertable, Kysely, Selectable, ShallowDehydrateObject, Updateable } from 'kysely';
 import { Album, columns } from 'src/database.js';
 import { ChunkedArray, DummyValue, GenerateSql } from 'src/decorators.js';
 import { AlbumUserRole, SharedLinkType } from 'src/enum.js';

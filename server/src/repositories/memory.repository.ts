@@ -1,15 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import {
-  type ExpressionBuilder,
-  type Insertable,
-  type Kysely,
-  type OrderByDirection,
-  type Updateable,
-  sql,
-} from 'kysely';
+import { sql } from 'kysely';
 import { jsonArrayFrom } from 'kysely/helpers/postgres';
 import { DateTime } from 'luxon';
 import { InjectKysely } from 'nestjs-kysely';
+import type { ExpressionBuilder, Insertable, Kysely, OrderByDirection, Updateable } from 'kysely';
 import type { IBulkAsset } from 'src/types.js';
 import { Chunked, ChunkedSet, DummyValue, GenerateSql } from 'src/decorators.js';
 import { MemorySearchDto } from 'src/dtos/memory.dto.js';

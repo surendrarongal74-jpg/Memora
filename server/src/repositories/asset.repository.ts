@@ -1,22 +1,23 @@
 import { Injectable } from '@nestjs/common';
-import {
-  type ExpressionBuilder,
-  type Insertable,
-  type Kysely,
-  type NotNull,
-  type SelectQueryBuilder,
-  type Selectable,
-  type ShallowDehydrateObject,
-  type Updateable,
-  sql,
-} from 'kysely';
+import { sql } from 'kysely';
 import { jsonArrayFrom } from 'kysely/helpers/postgres';
 import { isEmpty, isUndefined, omitBy } from 'lodash-es';
 import { InjectKysely } from 'nestjs-kysely';
+import type {
+  ExpressionBuilder,
+  Insertable,
+  Kysely,
+  NotNull,
+  SelectQueryBuilder,
+  Selectable,
+  ShallowDehydrateObject,
+  Updateable,
+} from 'kysely';
+import type { AuthDto } from 'src/dtos/auth.dto.js';
 import { JOBS_LIBRARY_PAGINATION_SIZE } from 'src/constants.js';
 import { LockableProperty, Stack } from 'src/database.js';
 import { Chunked, ChunkedArray, DummyValue, GenerateSql } from 'src/decorators.js';
-import { type AuthDto, isMetadataHidden } from 'src/dtos/auth.dto.js';
+import { isMetadataHidden } from 'src/dtos/auth.dto.js';
 import {
   AssetFileType,
   AssetOrder,

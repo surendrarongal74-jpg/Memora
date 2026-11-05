@@ -3,8 +3,9 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { setTimeout } from 'node:timers/promises';
 import { vitest } from 'vitest';
+import type { WatchOptions } from 'src/repositories/storage.repository.js';
 import { LoggingRepository } from 'src/repositories/logging.repository.js';
-import { StorageRepository, type WatchOptions } from 'src/repositories/storage.repository.js';
+import { StorageRepository } from 'src/repositories/storage.repository.js';
 import { automock } from 'test/utils.js';
 
 describe(StorageRepository.name, () => {
