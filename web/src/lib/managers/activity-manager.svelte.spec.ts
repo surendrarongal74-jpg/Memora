@@ -1,9 +1,9 @@
 import { activityManager } from '#lib/managers/activity-manager.svelte.ts';
 import {
+  ReactionType,
   deleteActivity,
   getActivities,
   getActivityStatistics,
-  ReactionType,
   type ActivityResponseDto,
 } from '@immich/sdk';
 
