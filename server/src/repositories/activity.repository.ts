@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { type Insertable, type Kysely, type NotNull, sql } from 'kysely';
+import { sql } from 'kysely';
 import { jsonObjectFrom } from 'kysely/helpers/postgres';
 import { InjectKysely } from 'nestjs-kysely';
+import type { Insertable, Kysely, NotNull } from 'kysely';
 import { columns } from 'src/database.js';
 import { DummyValue, GenerateSql } from 'src/decorators.js';
 import { AssetVisibility } from 'src/enum.js';

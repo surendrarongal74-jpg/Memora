@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { type Insertable, type Kysely, type Updateable, sql } from 'kysely';
+import { sql } from 'kysely';
 import { InjectKysely } from 'nestjs-kysely';
+import type { Insertable, Kysely, Updateable } from 'kysely';
 import { DummyValue, GenerateSql } from 'src/decorators.js';
 import { LibraryStatsResponseDto } from 'src/dtos/library.dto.js';
 import { AssetType, AssetVisibility } from 'src/enum.js';

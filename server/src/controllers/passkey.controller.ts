@@ -14,9 +14,10 @@ import {
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import type { Request, Response } from 'express';
+import type { AuthDto } from 'src/dtos/auth.dto.js';
 import type { LoginDetails } from 'src/services/auth.service.js';
 import { Endpoint, HistoryBuilder } from 'src/decorators.js';
-import { type AuthDto, LoginResponseDto } from 'src/dtos/auth.dto.js';
+import { LoginResponseDto } from 'src/dtos/auth.dto.js';
 import {
   PasskeyAuthenticationFinishDto,
   PasskeyAuthenticationOptionsDto,

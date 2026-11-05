@@ -1,15 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import {
-  type ExpressionBuilder,
-  type Insertable,
-  type Kysely,
-  type SqlBool,
-  type Updateable,
-  expressionBuilder,
-  sql,
-} from 'kysely';
+import { expressionBuilder, sql } from 'kysely';
 import { jsonArrayFrom, jsonObjectFrom } from 'kysely/helpers/postgres';
 import { InjectKysely } from 'nestjs-kysely';
+import type { ExpressionBuilder, Insertable, Kysely, SqlBool, Updateable } from 'kysely';
+import type { PaginationOptions } from 'src/utils/pagination.js';
 import { AssetFace, PersonUser, columns } from 'src/database.js';
 import { Chunked, ChunkedArray, DummyValue, GenerateSql } from 'src/decorators.js';
 import { PersonUserRole } from 'src/dtos/person.dto.js';
@@ -22,7 +16,7 @@ import { PersonGroupTable } from 'src/schema/tables/person-group.table.js';
 import { PersonTable } from 'src/schema/tables/person.table.js';
 import { anyUuid, dummy, inSharedAlbum, removeUndefinedKeys, withFilePath } from 'src/utils/database.js';
 import { isLeapDayObserved } from 'src/utils/date.js';
-import { type PaginationOptions, paginationHelper } from 'src/utils/pagination.js';
+import { paginationHelper } from 'src/utils/pagination.js';
 
 export interface PersonFilterOptions {
   sharedById?: string;

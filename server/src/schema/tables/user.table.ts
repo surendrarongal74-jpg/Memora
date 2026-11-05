@@ -4,7 +4,6 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   ForeignKeyColumn,
-  type Generated,
   Index,
   PrimaryGeneratedColumn,
   Table,
@@ -12,6 +11,7 @@ import {
   UpdateDateColumn,
 } from '@immich/sql-tools';
 import { ColumnType } from 'kysely';
+import type { Generated } from '@immich/sql-tools';
 import { UpdateIdColumn, UpdatedAtTrigger } from 'src/decorators.js';
 import { UserAvatarColor, UserStatus } from 'src/enum.js';
 import { user_delete_audit } from 'src/schema/functions.js';

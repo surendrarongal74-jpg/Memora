@@ -1,5 +1,6 @@
-import { type ImmichDatabaseDumpConfig, YuccaService as OrchestratorService } from '@futo-org/backups-orchestrator-api';
+import { YuccaService as OrchestratorService } from '@futo-org/backups-orchestrator-api';
 import { Injectable, Optional } from '@nestjs/common';
+import type { ImmichDatabaseDumpConfig } from '@futo-org/backups-orchestrator-api';
 import type { SystemConfig } from 'src/dtos/config.dto.js';
 import type { ArgOf } from 'src/repositories/event.repository.js';
 import { StorageCore } from 'src/cores/storage.core.js';

@@ -1,7 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { type Kysely, type OrderByDirection, type Selectable, type ShallowDehydrateObject, sql } from 'kysely';
+import { sql } from 'kysely';
 import { InjectKysely } from 'nestjs-kysely';
 import z from 'zod';
+import type { Kysely, OrderByDirection, Selectable, ShallowDehydrateObject } from 'kysely';
+import type { PaginationOptions } from 'src/utils/pagination.js';
 import { columns } from 'src/database.js';
 import { DummyValue, GenerateSql } from 'src/decorators.js';
 import { MapAsset } from 'src/dtos/asset-response.dto.js';
@@ -21,7 +23,7 @@ import {
   withExifInner,
   withSearchOrder,
 } from 'src/utils/database.js';
-import { type PaginationOptions, paginationHelper } from 'src/utils/pagination.js';
+import { paginationHelper } from 'src/utils/pagination.js';
 
 export interface SearchAssetIdOptions {
   checksum?: Buffer;

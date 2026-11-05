@@ -16,8 +16,8 @@ import {
   expressionBuilder,
   sql,
 } from 'kysely';
-import { jsonArrayFrom, jsonObjectFrom } from 'kysely/helpers/postgres';
 import { PostgresJSDialect } from 'kysely-postgres-js';
+import { jsonArrayFrom, jsonObjectFrom } from 'kysely/helpers/postgres';
 import { Notice, PostgresError } from 'postgres';
 import type { AudioStreamInfo, VectorExtension, VideoFormat, VideoPacketInfo, VideoStreamInfo } from 'src/types.js';
 import { LockableProperty, Person, columns, lockableProperties } from 'src/database.js';

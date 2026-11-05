@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, ForeignKeyColumn, type Generated, Table, Timestamp } from '@immich/sql-tools';
+import { Column, CreateDateColumn, ForeignKeyColumn, Table, Timestamp } from '@immich/sql-tools';
+import type { Generated } from '@immich/sql-tools';
 import { PrimaryGeneratedUuidV7Column } from 'src/decorators.js';
 import { MemoryTable } from 'src/schema/tables/memory.table.js';
 

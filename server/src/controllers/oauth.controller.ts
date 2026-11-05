@@ -1,9 +1,10 @@
 import { Body, Controller, Get, HttpCode, HttpStatus, Post, Redirect, Req, Res } from '@nestjs/common';
 import { ApiConsumes, ApiTags } from '@nestjs/swagger';
 import type { Request, Response } from 'express';
+import type { AuthDto } from 'src/dtos/auth.dto.js';
+import type { LoginDetails } from 'src/services/auth.service.js';
 import { Endpoint, HistoryBuilder } from 'src/decorators.js';
 import {
-  type AuthDto,
   LoginResponseDto,
   OAuthAuthorizeResponseDto,
   OAuthBackchannelLogoutDto,
@@ -13,7 +14,7 @@ import {
 import { UserAdminResponseDto } from 'src/dtos/user.dto.js';
 import { ApiTag, AuthType, ImmichCookie } from 'src/enum.js';
 import { Auth, Authenticated, GetLoginDetails } from 'src/middleware/auth.guard.js';
-import { AuthService, type LoginDetails } from 'src/services/auth.service.js';
+import { AuthService } from 'src/services/auth.service.js';
 import { respondWithCookie } from 'src/utils/response.js';
 
 @ApiTags(ApiTag.Authentication)

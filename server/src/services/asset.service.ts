@@ -3,6 +3,7 @@ import { isUndefined, omitBy } from 'lodash-es';
 import { DateTime, Duration } from 'luxon';
 import type { AssetFile } from 'src/database.js';
 import type { AuthDto } from 'src/dtos/auth.dto.js';
+import type { AssetEditActionItem } from 'src/dtos/editing.dto.js';
 import type { JobItem, JobOf } from 'src/types.js';
 import { OnJob } from 'src/decorators.js';
 import { AssetResponseDto, SanitizedAssetResponseDto, mapAsset } from 'src/dtos/asset-response.dto.js';
@@ -21,12 +22,7 @@ import {
   UpdateAssetDto,
   mapStats,
 } from 'src/dtos/asset.dto.js';
-import {
-  AssetEditAction,
-  type AssetEditActionItem,
-  AssetEditsCreateDto,
-  AssetEditsResponseDto,
-} from 'src/dtos/editing.dto.js';
+import { AssetEditAction, AssetEditsCreateDto, AssetEditsResponseDto } from 'src/dtos/editing.dto.js';
 import { AssetOcrResponseDto } from 'src/dtos/ocr.dto.js';
 import {
   AssetFileType,

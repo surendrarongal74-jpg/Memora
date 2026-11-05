@@ -3,15 +3,16 @@ import {
   AfterInsertTrigger,
   Column,
   ForeignKeyColumn,
-  type Generated,
   PrimaryGeneratedColumn,
   Table,
   Timestamp,
   Unique,
   UpdateDateColumn,
 } from '@immich/sql-tools';
+import type { Generated } from '@immich/sql-tools';
+import type { AssetEditParameters } from 'src/dtos/editing.dto.js';
 import { UpdateIdColumn, UpdatedAtTrigger } from 'src/decorators.js';
-import { AssetEditAction, type AssetEditParameters } from 'src/dtos/editing.dto.js';
+import { AssetEditAction } from 'src/dtos/editing.dto.js';
 import { asset_edit_audit, asset_edit_delete, asset_edit_insert } from 'src/schema/functions.js';
 import { AssetTable } from 'src/schema/tables/asset.table.js';
 

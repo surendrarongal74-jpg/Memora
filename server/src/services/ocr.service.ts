@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-
 import type { JobOf } from 'src/types.js';
 import { OnJob } from 'src/decorators.js';
 import { AssetVisibility, JobName, JobStatus, QueueName } from 'src/enum.js';

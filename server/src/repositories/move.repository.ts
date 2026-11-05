@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { type Insertable, type Kysely, type Updateable, sql } from 'kysely';
+import { sql } from 'kysely';
 import { InjectKysely } from 'nestjs-kysely';
+import type { Insertable, Kysely, Updateable } from 'kysely';
+import type { PathType } from 'src/enum.js';
 import { DummyValue, GenerateSql } from 'src/decorators.js';
-import { AssetPathType, type PathType } from 'src/enum.js';
+import { AssetPathType } from 'src/enum.js';
 import { DB } from 'src/schema/index.js';
 import { MoveTable } from 'src/schema/tables/move.table.js';
 

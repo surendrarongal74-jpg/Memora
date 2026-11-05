@@ -2,12 +2,12 @@ import {
   AfterDeleteTrigger,
   Column,
   ForeignKeyColumn,
-  type Generated,
   PrimaryColumn,
   Table,
   Timestamp,
   UpdateDateColumn,
 } from '@immich/sql-tools';
+import type { Generated } from '@immich/sql-tools';
 import type { UserMetadata, UserMetadataItem } from 'src/types.js';
 import { UpdateIdColumn, UpdatedAtTrigger } from 'src/decorators.js';
 import { UserMetadataKey } from 'src/enum.js';

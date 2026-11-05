@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { type Kysely, sql } from 'kysely';
+import { sql } from 'kysely';
 import { InjectKysely } from 'nestjs-kysely';
+import type { Kysely } from 'kysely';
 import type { SyncAck } from 'src/types.js';
 import { columns } from 'src/database.js';
 import { DummyValue, GenerateSql } from 'src/decorators.js';

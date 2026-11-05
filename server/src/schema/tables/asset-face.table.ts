@@ -4,7 +4,6 @@ import {
   Column,
   DeleteDateColumn,
   ForeignKeyColumn,
-  type Generated,
   Index,
   PrimaryGeneratedColumn,
   Table,
@@ -12,6 +11,7 @@ import {
   TriggerFunction,
   UpdateDateColumn,
 } from '@immich/sql-tools';
+import type { Generated } from '@immich/sql-tools';
 import { UpdateIdColumn } from 'src/decorators.js';
 import { AssetVisibility, SourceType } from 'src/enum.js';
 import { asset_face_source_type, asset_visibility_enum } from 'src/schema/enums.js';
